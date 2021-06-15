@@ -52,7 +52,7 @@
             "type": "bool"
         },
         "installO365pluginsSwitch": {
-            "defaultValue": false,
+            "defaultValue": true,
             "metadata": {
                 "description": "Switch to install Moodle Office 365 plugins. As of May 22, 2018, O365 plugins for Moodle 3.5 haven't been released, so to set this true, you must set the moodleVersion to 3.4 or below."
             },
@@ -106,7 +106,7 @@
             "type": "string"
         },
         "siteURL": {
-            "defaultValue": "www.example.org",
+            "defaultValue": "moodle.nubiral.tk",
             "metadata": {
                 "description": "URL for Moodle site"
             },
@@ -428,21 +428,21 @@
             "type": "string"
         },
         "keyVaultResourceId": {
-            "defaultValue": "",
+            "defaultValue": "/subscriptions/63e68764-6c1e-4010-a6bf-0c967f06188c/resourceGroups/keyvrg/providers/Microsoft.KeyVault/vaults/kvmoodnubtest3255",
             "metadata": {
                 "description": "(VMSS https termination only) Azure Resource Manager resource ID of the Key Vault in case you stored your SSL cert in an Azure Key Vault (Note that this Key Vault must have been pre-created on the same Azure region where this template is being deployed). Leave this blank if you didn't. Resource ID example: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/xxx/providers/Microsoft.KeyVault/vaults/yyy. This value can be obtained from keyvault.sh output if you used the script to store your SSL cert in your Key Vault."
             },
             "type": "string"
         },
         "sslCertKeyVaultURL": {
-            "defaultValue": "",
+            "defaultValue": "https://kvmoodnubtest3255.vault.azure.net/secrets/sslcertificates/342a2a733df642609c110dea7195e27d",
             "metadata": {
                 "description": "(VMSS https termination only) Azure Key Vault URL for your stored SSL cert. This value can be obtained from keyvault.sh output if you used the script to store your SSL cert in your Key Vault. This parameter is ignored if the keyVaultResourceId parameter is blank."
             },
             "type": "string"
         },
         "sslCertThumbprint": {
-            "defaultValue": "",
+            "defaultValue": "C594AAEFC516457121BBF4C3C38ACC54CB694FE4",
             "metadata": {
                 "description": "(VMSS https termination only) Thumbprint of your stored SSL cert. This value can be obtained from keyvault.sh output if you used the script to store your SSL cert in your Key Vault. This parameter is ignored if the keyVaultResourceId parameter is blank."
             },
